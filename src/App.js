@@ -2,6 +2,7 @@
 import './App.css';
 import React, { Component } from 'react'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import News from './components/News';
 import { BrowserRouter as Router, Route ,Routes } from "react-router-dom";
 
@@ -21,6 +22,7 @@ export default class App extends Component {
             <Route exact path='/sports' element={<News key="sports" pageSize={this.pageSize} country="us" category = "sports"/>}></Route>
             <Route exact path='/technology' element={<News key="technology" pageSize={this.pageSize} country="us" category = "technology"/>}></Route>
           </Routes>
+          <Footer/>
         </Router>
       </div>
     )
